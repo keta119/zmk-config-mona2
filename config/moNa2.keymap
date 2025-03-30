@@ -22,11 +22,18 @@
             label = "TO_LAYER_0";
         };
 
-        new_macro: new_macro {
+        kakko: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            bindings = <&kp LEFT_PARENTHESIS &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
             label = "NEW_MACRO";
+        };
+
+        kagi_kakko: kagi_kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "KAGI_KAKKO";
         };
     };
 
@@ -65,10 +72,10 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4  &kp F5                        &trans       &trans    &kp UP    &kp LG(TAB)  &kp LG(D)
-&kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &trans      &trans   &kp LS(SQT)  &kp LEFT  &kp DOWN  &kp RIGHT    &trans
-&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp EQUAL    &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans   &kp BSPC    &kp DEL  &trans                                        &kp ESC
+&kp F1          &kp F2  &kp F3  &kp F4  &kp F5                        &trans      &trans    &kp UP    &kp LG(TAB)  &kp LG(D)
+&kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &trans      &trans   &kp LS(N7)  &kp LEFT  &kp DOWN  &kp RIGHT    &trans
+&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp EQUAL   &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans   &kp BSPC    &kp DEL  &trans                                       &kp ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -76,9 +83,9 @@
 
         layer_2 {
             bindings = <
-&kp TAB          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                                   &kp EXCLAMATION  &kp LEFT_BRACKET   &kp RIGHT_BRACKET      &kp DOLLAR   &kp PERCENT
-&kp COLON        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &kp UNDERSCORE  &kp AMPERSAND    &new_macro         &kp RIGHT_PARENTHESIS  &kp INT_YEN  &kp INTERNATIONAL_1
-&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans          &kp QMARK        &kp DOUBLE_QUOTES  &kp COMMA              &kp PERIOD   &kp AT_SIGN
+&kp TAB          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                                   &kp EXCLAMATION   &kagi_kakko       &kp RIGHT_BRACKET      &kp DOLLAR   &kp PERCENT
+&kp COLON        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &kp UNDERSCORE  &kp LS(NUMBER_6)  &kakko            &kp RIGHT_PARENTHESIS  &kp INT_YEN  &kp LS(INTERNATIONAL_1)
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans          &kp QMARK         &kp LS(NUMBER_2)  &kp COMMA              &kp PERIOD   &kp AT_SIGN
 &kp LEFT_SHIFT   &kp KP_EQUAL     &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE      &trans                                                                  &kp ESCAPE
             >;
 
