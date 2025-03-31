@@ -72,10 +72,10 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4  &kp F5                        &trans            &trans    &kp UP    &kp LG(TAB)  &kp LG(D)
-&kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &trans      &trans   &kp LS(NUMBER_7)  &kp LEFT  &kp DOWN  &kp RIGHT    &trans
-&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp UNDERSCORE    &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans   &kp BSPC    &kp DEL  &trans                                             &kp ESC
+&kp F1          &kp F2  &kp F3  &kp F4  &kp F5                        &trans             &trans    &kp UP    &kp LG(TAB)  &kp LG(D)
+&kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &trans      &trans   &kp LS(NUMBER_7)   &kp LEFT  &kp DOWN  &kp RIGHT    &trans
+&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp LS(SEMICOLON)  &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans   &kp BSPC    &kp DEL  &trans                                              &kp ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -86,7 +86,7 @@
 &kp TAB            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                               &kp EXCLAMATION   &kagi_kakko       &trans            &kp DOLLAR  &kp PERCENT
 &kp LS(SEMICOLON)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &trans      &kp LS(NUMBER_6)  &kakko            &kp LS(NUMBER_3)  &kp INT3    &kp RIGHT_BRACKET
 &kp KP_NUMBER_0    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans      &kp QMARK         &kp LS(NUMBER_2)  &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
-&kp LEFT_SHIFT     &kp EQUAL        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE  &trans                                                            &kp ESCAPE
+&kp LEFT_SHIFT     &kp UNDER        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE  &trans                                                            &kp ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
