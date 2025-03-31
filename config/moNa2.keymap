@@ -74,7 +74,7 @@
             bindings = <
 &kp F1          &kp F2  &kp F3  &kp F4  &kp F5                        &trans            &trans    &kp UP    &kp LG(TAB)  &kp LG(D)
 &kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &trans      &trans   &kp LS(NUMBER_7)  &kp LEFT  &kp DOWN  &kp RIGHT    &trans
-&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp LS(NUMBER_6)  &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
+&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp RS(CARET)     &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
 &kp LEFT_SHIFT  &trans  &trans  &trans  &trans   &kp BSPC    &kp DEL  &trans                                             &kp ESC
             >;
 
