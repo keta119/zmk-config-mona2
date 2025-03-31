@@ -35,6 +35,13 @@
             bindings = <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
             label = "KAGI_KAKKO";
         };
+
+        test: test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(AT_SIGN) &kp UNDERSCORE &kp UNDER &kp LS(UNDERSCORE) &kp UNDER &kp LS(SEMICOLON) &kp SEMICOLON &kp COLON &kp RS(COLON) &kp LS(MINUS) &kp MINUS &kp RS(CARET)>;
+            label = "TEST";
+        };
     };
 
     behaviors {
@@ -62,8 +69,8 @@
         default_layer {
             bindings = <
 &kp Q           &kp W         &kp E         &kp R        &kp T                                        &kp Y        &kp U    &kp I     &kp O     &kp P
-&kp A           &kp S         &kp D         &kp F        &kp G        &trans         &mo 6            &kp H        &lt 3 J  &kp K     &kp L     &kp MINUS
-&mt LCTRL Z     &kp X         &kp C         &kp V        &kp B        &mo 4          &mo 5            &kp N        &kp M    &mkp MB1  &mkp MB2  &mt RCTRL LS(SEMICOLON)
+&kp A           &kp S         &kp D         &kp F        &kp G        &trans         &mo 5            &kp H        &lt 3 J  &kp K     &kp L     &kp MINUS
+&mt LCTRL Z     &kp X         &kp C         &kp V        &kp B        &mo 4          &mo 6            &kp N        &kp M    &mkp MB1  &mkp MB2  &mt RCTRL LS(SEMICOLON)
 &kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANG2  &lt 2 SPACE  &lt 1 LANG1    &lt 1 BACKSPACE  &lt 2 ENTER                               &mt LEFT_SHIFT SLASH
             >;
 
@@ -74,7 +81,7 @@
             bindings = <
 &kp F1          &kp F2  &kp F3  &kp F4  &kp F5                        &trans            &trans    &kp UP    &kp LG(TAB)  &kp LG(D)
 &kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &trans      &trans   &kp LS(NUMBER_7)  &kp LEFT  &kp DOWN  &kp RIGHT    &trans
-&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp RS(CARET)     &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
+&trans          &trans  &trans  &trans  &trans   &trans      &trans   &kp CARET         &mkp MB3  &mkp MB1  &mkp MB2     &kp RCTRL
 &kp LEFT_SHIFT  &trans  &trans  &trans  &trans   &kp BSPC    &kp DEL  &trans                                             &kp ESC
             >;
 
@@ -83,10 +90,10 @@
 
         layer_2 {
             bindings = <
-&kp TAB            &kp KP_NUMBER_7     &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                                   &kp EXCLAMATION   &kagi_kakko       &trans     &kp DOLLAR  &kp PERCENT
-&kp LS(SEMICOLON)  &kp KP_NUMBER_4     &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &kp UNDERSCORE  &kp LS(NUMBER_6)  &kakko            &trans     &kp INT3    &kp NON_US_BACKSLASH
-&kp KP_NUMBER_0    &kp KP_NUMBER_1     &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans          &kp QMARK         &kp LS(NUMBER_2)  &kp COMMA  &kp PERIOD  &kp LEFT_BRACKET
-&kp LEFT_SHIFT     &kp KP_EQUAL_AS400  &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE      &trans                                                     &kp ESCAPE
+&kp TAB            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                                   &kp EXCLAMATION   &kagi_kakko       &trans            &kp DOLLAR  &kp PERCENT
+&kp LS(SEMICOLON)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &kp UNDERSCORE  &kp LS(NUMBER_6)  &kakko            &kp LS(NUMBER_3)  &kp INT3    &kp RIGHT_BRACKET
+&kp KP_NUMBER_0    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans          &kp QMARK         &kp LS(NUMBER_2)  &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
+&kp LEFT_SHIFT     &kp EQUAL        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE      &trans                                                            &kp ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -105,22 +112,13 @@
 
         bluetooth {
             bindings = <
-&trans       &trans  &trans  &trans  &trans                         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans       &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans       &trans  &trans  &trans  &trans  &trans    &trans       &trans                                                  &bt BT_CLR_ALL
+&trans       &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans        &trans
+&bootloader  &trans  &trans  &trans  &trans  &trans    &trans  &bootloader   &trans        &trans        &trans        &bt BT_CLR
+&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                  &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_up_down>;
-        };
-
-        layer_5 {
-            bindings = <
-&kp LS(NUMBER_1)  &kp LS(N0)            &kp LS(MINUS)      &kp MINUS                 &kp CARET                               &kp SEMICOLON  &kp SEMICOLON  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &trans
-&kp CARET         &kp NON_US_BACKSLASH  &kp BACKSLASH      &kp LS(NON_US_BACKSLASH)  &kp LS(BSLH)   &trans    &kp LS(COMMA)  &kp LS(DOT)    &kp SLASH      &kp LS(SLASH)      &kp NON_US_BACKSLASH   &trans
-&kp AT_SIGN       &kp LS(AT_SIGN)       &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)      &kp LBKT       &trans    &trans         &trans         &trans         &trans             &trans                 &trans
-&kp LS(LBKT)      &kp LS(SEMICOLON)     &kp LS(SEMICOLON)  &kp COLON                 &kp LA(COLON)  &trans    &trans         &trans                                                                  &trans
-            >;
         };
 
         layer_6 {
@@ -129,6 +127,15 @@
 &trans            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans            &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans            &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&kp LS(NUMBER_1)  &kp LS(N0)            &kp LS(MINUS)      &kp MINUS                 &kp CARET                               &kp SEMICOLON  &kp INT8      &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &test
+&kp CARET         &kp NON_US_BACKSLASH  &kp BACKSLASH      &kp LS(NON_US_BACKSLASH)  &kp LS(BSLH)   &trans    &kp LS(COMMA)  &kp LS(DOT)    &kp SLASH     &kp LS(SLASH)      &kp NON_US_BACKSLASH   &kp SLASH
+&kp AT_SIGN       &kp LS(AT_SIGN)       &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)      &kp LBKT       &trans    &kp LS(SLASH)  &kp FSLH       &kp LS(FSLH)  &kp POUND          &kp INT1               &kp INTERNATIONAL_1
+&kp LS(LBKT)      &kp LS(SEMICOLON)     &kp LS(SEMICOLON)  &kp COLON                 &kp LA(COLON)  &trans    &kp INT6       &kp INT7                                                               &kp INT9
             >;
         };
     };
