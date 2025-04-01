@@ -29,7 +29,7 @@
             label = "NEW_MACRO";
         };
 
-        kagi_kakko: kagi_kakko {
+        dai_kakko: kagi_kakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
@@ -61,9 +61,9 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &lt 6 E       &lt 5 R      &lt 4 T                                      &kp Y        &kp U    &kp I     &kp O     &kp P
-&kp A           &kp S         &kp D         &kp F        &kp G        &trans         &trans           &kp H        &lt 3 J  &kp K     &kp L     &kp MINUS
-&mt LCTRL Z     &kp X         &kp C         &kp V        &kp B        &trans         &trans           &kp N        &kp M    &mkp MB1  &mkp MB2  &mt RCTRL SINGLE_QUOTE
+&kp Q           &kp W         &kp E         &kp R        &kp T                                        &kp Y        &kp U    &kp I     &kp O     &kp P
+&kp A           &kp S         &kp D         &kp F        &kp G        &trans         &dai_kakko       &kp H        &lt 3 J  &kp K     &kp L     &kp MINUS
+&mt LCTRL Z     &kp X         &kp C         &kp V        &kp B        &trans         &kakko           &kp N        &kp M    &mkp MB1  &mkp MB2  &mt RCTRL SINGLE_QUOTE
 &kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANG2  &lt 2 SPACE  &lt 1 LANG1    &lt 1 BACKSPACE  &lt 2 ENTER                               &mt LEFT_SHIFT SLASH
             >;
 
@@ -83,10 +83,10 @@
 
         layer_2 {
             bindings = <
-&kp TAB           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                               &kp EXCLAMATION   &kagi_kakko       &trans            &kp DOLLAR  &kp PERCENT
-&kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &trans      &kp LS(NUMBER_6)  &kakko            &kp LS(NUMBER_3)  &kp INT3    &kp RIGHT_BRACKET
-&kp KP_NUMBER_0   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans      &kp QMARK         &kp LS(NUMBER_2)  &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
-&kp LEFT_SHIFT    &kp UNDER        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE  &trans                                                            &kp ESCAPE
+&kp TAB           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                               &kp EXCLAMATION   &kp RIGHT_BRACKET  &kp BACKSLASH     &kp DOLLAR  &kp PERCENT
+&kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &trans      &kp LS(NUMBER_6)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp INT3    &kp LS(INTERNATIONAL_1)
+&kp KP_NUMBER_0   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans      &kp QMARK         &kp LS(NUMBER_2)   &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
+&kp LEFT_SHIFT    &kp UNDER        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE  &trans                                                             &kp ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -112,17 +112,6 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
-        };
-
-        layer_5 {
-            bindings = <
-&kp LS(NUMBER_1)    &kp LS(N0)            &kp LS(MINUS)      &kp MINUS                 &kp ASTRK                               &kp SEMICOLON  &kp INT8      &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)  &trans
-&kp CARET           &kp NON_US_BACKSLASH  &kp BACKSLASH      &kp LS(NON_US_BACKSLASH)  &kp LS(BSLH)   &trans    &kp LS(COMMA)  &kp LS(DOT)    &kp SLASH     &kp LS(SLASH)      &kp NON_US_BACKSLASH   &kp SLASH
-&kp AT_SIGN         &kp LS(AT_SIGN)       &kp LEFT_BRACKET   &kp LS(LEFT_BRACKET)      &kp LBKT       &trans    &kp LS(SLASH)  &kp FSLH       &kp LS(FSLH)  &kp POUND          &kp INT1               &kp INTERNATIONAL_1
-&kp LS(LEFT_SHIFT)  &kp LS(SEMICOLON)     &kp LS(SEMICOLON)  &kp COLON                 &kp LA(COLON)  &trans    &kp INT6       &kp INT7                                                               &kp INT9
-            >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         layer_6 {
