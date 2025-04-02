@@ -61,7 +61,7 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R        &kp T                                        &kp Y        &kp U    &kp I     &kp O     &kp P
+&lt 4 Q         &kp W         &kp E         &kp R        &kp T                                        &kp Y        &kp U    &kp I     &kp O     &kp P
 &kp A           &kp S         &kp D         &kp F        &kp G        &trans         &dai_kakko       &kp H        &lt 3 J  &kp K     &kp L     &kp MINUS
 &mt LCTRL Z     &kp X         &kp C         &kp V        &kp B        &trans         &kakko           &kp N        &kp M    &mkp MB1  &mkp MB2  &mt RCTRL SINGLE_QUOTE
 &kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 LANG2  &lt 2 SPACE  &lt 1 LANG1    &lt 1 BACKSPACE  &lt 2 ENTER                               &mt LEFT_SHIFT SLASH
@@ -83,10 +83,10 @@
 
         layer_2 {
             bindings = <
-&kp TAB           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                               &kp EXCLAMATION   &kp RIGHT_BRACKET  &kp BACKSLASH     &kp DOLLAR  &kp PERCENT
-&kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &trans      &kp LS(NUMBER_6)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp INT3    &kp LS(INTERNATIONAL_1)
-&kp KP_NUMBER_0   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &trans      &kp QMARK         &kp LS(NUMBER_2)   &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
-&kp LEFT_SHIFT    &kp UNDER        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE  &trans                                                             &kp ESCAPE
+&kp TAB           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                                     &kp EXCLAMATION   &kp RIGHT_BRACKET  &kp BACKSLASH     &kp DOLLAR  &kp PERCENT
+&kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &kp LS(NUMBER_3)  &kp LS(NUMBER_6)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp INT3    &kp LS(INTERNATIONAL_1)
+&kp KP_NUMBER_0   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &kp ASTRK         &kp QMARK         &kp LS(NUMBER_2)   &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
+&kp LEFT_SHIFT    &kp UNDER        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE        &trans                                                             &kp ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
