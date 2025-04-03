@@ -60,7 +60,7 @@
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_5 &kp NUMBER_1 &kp NUMBER_6 &kp LS(F) &kp I &kp R &kp E>;
+            bindings = <&kp NUMBER_5 &kp NUMBER_1 &kp NUMBER_6 &kp LS(F) &kp I &kp R &kp E &kp LEFT_BRACKET>;
             label = "LOGIN";
         };
     };
