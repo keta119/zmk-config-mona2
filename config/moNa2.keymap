@@ -35,6 +35,34 @@
             bindings = <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
             label = "KAGI_KAKKO";
         };
+
+        syokuin: syokuin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp I &kp M &kp S &kp NUMBER_2 &kp NUMBER_4 &kp NUMBER_1 &kp NUMBER_7>;
+            label = "SYOKUIN";
+        };
+
+        kousei: kousei {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp T &kp S &kp H &kp NUMBER_5 &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_8>;
+            label = "KOUSEI";
+        };
+
+        menkyo: menkyo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp E &kp N &kp K &kp Y &kp O>;
+            label = "MENKYO";
+        };
+
+        login: login {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_5 &kp NUMBER_1 &kp NUMBER_6 &kp LS(F) &kp I &kp R &kp E>;
+            label = "LOGIN";
+        };
     };
 
     behaviors {
@@ -85,7 +113,7 @@
             bindings = <
 &kp TAB           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK                                     &kp EXCLAMATION   &kp RIGHT_BRACKET  &kp BACKSLASH     &kp DOLLAR  &kp PERCENT
 &kp SINGLE_QUOTE  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE   &trans           &kp LS(NUMBER_3)  &kp LS(NUMBER_6)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp INT3    &kp LS(INTERNATIONAL_1)
-&kp KP_NUMBER_0   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &kp ASTRK         &kp QMARK         &kp LS(NUMBER_2)   &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
+&kp KP_NUMBER_0   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS    &trans           &kp LS(APOS)      &kp QMARK         &kp LS(NUMBER_2)   &kp COMMA         &kp PERIOD  &kp LEFT_BRACKET
 &kp LEFT_SHIFT    &kp UNDER        &kp KP_DOT       &trans           &trans          &kp BACKSPACE    &kp DELETE        &trans                                                             &kp ESCAPE
             >;
 
@@ -106,7 +134,7 @@
         bluetooth {
             bindings = <
 &trans       &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans        &trans        &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &login  &syokuin      &kousei       &menkyo       &trans        &trans
 &bootloader  &trans  &trans  &trans  &trans  &trans    &trans  &bootloader   &trans        &trans        &trans        &bt BT_CLR
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                  &bt BT_CLR_ALL
             >;
