@@ -12,7 +12,19 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        double-kagi-kakko {
+            bindings = <&dai_kakko>;
+            key-positions = <6 7>;
+        };
+
+        double_kakko {
+            bindings = <&kakko>;
+            key-positions = <18 19>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -39,28 +51,28 @@
         syokuin: syokuin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp F &kp I &kp M &kp S &kp NUMBER_2 &kp NUMBER_4 &kp NUMBER_1 &kp NUMBER_7>;
+            bindings = <&kp F &kp I &kp M &kp S &kp NUMBER_2 &kp NUMBER_4 &kp NUMBER_1 &kp NUMBER_7 &kp ENTER>;
             label = "SYOKUIN";
         };
 
         kousei: kousei {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp T &kp S &kp H &kp NUMBER_5 &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_8>;
+            bindings = <&kp S &kp T &kp S &kp H &kp NUMBER_5 &kp NUMBER_0 &kp NUMBER_5 &kp NUMBER_8 &kp ENTER>;
             label = "KOUSEI";
         };
 
         menkyo: menkyo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp M &kp E &kp N &kp K &kp Y &kp O>;
+            bindings = <&kp M &kp E &kp N &kp K &kp Y &kp O &kp ENTER>;
             label = "MENKYO";
         };
 
         login: login {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_5 &kp NUMBER_1 &kp NUMBER_6 &kp LS(F) &kp I &kp R &kp E &kp LEFT_BRACKET>;
+            bindings = <&kp NUMBER_5 &kp NUMBER_1 &kp NUMBER_6 &kp LS(F) &kp I &kp R &kp E &kp LEFT_BRACKET &kp ENTER>;
             label = "LOGIN";
         };
     };
